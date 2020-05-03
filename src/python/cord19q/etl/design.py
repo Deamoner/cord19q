@@ -50,6 +50,8 @@ class Design(StudyModel):
         self.keywords = StudyModel.getKeywords()
 
     def predict(self, sections):
+        print("got to predict on attribute")
+        print(type(sections))
         print(sections)
         # Build features array for document
         features = [self.features(sections)]
