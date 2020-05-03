@@ -44,6 +44,7 @@ class Attribute(StudyModel):
         self.tfidf = None
 
     def predict(self, sections):
+        print(sections)
         # Build features array for document
         text = [text for name, text, _ in sections if not name or StudyModel.filter(name.lower())]
 
